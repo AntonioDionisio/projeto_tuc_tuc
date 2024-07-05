@@ -2,6 +2,7 @@
 import java.util.Date;
 
 public class Colaborador extends Pessoa{
+    // Atributos
     private String matricula;
     private String cargo;
     private double participacaoLucro;
@@ -10,7 +11,7 @@ public class Colaborador extends Pessoa{
     private Date dtFimCtt;
 
 
-    //Metodo sem parametro
+    // Metodo construtor sem parametro
     public Colaborador () {
         super();
         this.matricula = "";
@@ -20,7 +21,7 @@ public class Colaborador extends Pessoa{
         this.dtInicioCtt = null;
         this.dtFimCtt = null;
     }
-    //Metodo com parametro
+    // Metodo construtor com parametro
     public Colaborador (String nomeCompleto, String email, String celular, String cpf_passaporte,String rg_cnh,
     Date dtNascimento, String genero, String senhaLogin, String nomeUsuario, String situacao) {
         super(nomeCompleto, email, celular, cpf_passaporte, rg_cnh, dtNascimento, genero, senhaLogin, nomeUsuario, situacao);
@@ -32,7 +33,7 @@ public class Colaborador extends Pessoa{
         this.dtFimCtt = dtFimCtt;
     }
 
-    //Getters e Setters
+    // Getters e Setters
     public String getMatricula() {
         return matricula;
     }
@@ -81,12 +82,12 @@ public class Colaborador extends Pessoa{
         this.dtFimCtt = dtFimCtt;
     }
 
-    //Metodo (ações)
+    // Acoes basicas
     public String exibirDadosColaborador() {
-        return "Matrícula: " + matricula + "\nNome Completo: "+ getNomeCompleto() +"\nCargo: " + cargo +
-                "\nParticipação nos Lucros: " + participacaoLucro +
-                "\nTipo de Contrato: " + tipoContrato + "\nData de Início do Contrato: " + dtInicioCtt +
-                "\nData de Término do Contrato: " + dtFimCtt;
+        return "Matricula: " + matricula + "\nNome Completo: "+ getNomeCompleto() +"\nCargo: " + cargo +
+                "\nParticipacao nos Lucros: " + participacaoLucro +
+                "\nTipo de Contrato: " + tipoContrato + "\nData de Inicio do Contrato: " + dtInicioCtt +
+                "\nData de Termino do Contrato: " + dtFimCtt;
     }
 
     public String exibirDadosColaboradorViagem() {

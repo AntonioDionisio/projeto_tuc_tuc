@@ -1,16 +1,14 @@
-// import java.io.BufferedWriter;
-// import java.io.FileWriter;
 import java.util.Date;
 
 class Cliente extends Pessoa {
-
+    // Atributos
     private String codCliente;
     private String situacao;
 
-    //Relacionamento de dados de outra class
+    // Relacionamento de dados de outra class
     private Endereco endereco;
     
-    //Metodo sem parametro
+    // Metodo construtor sem parametro
     public Cliente () {
         super();
         this.codCliente = "";
@@ -18,8 +16,8 @@ class Cliente extends Pessoa {
         this.endereco = null;
     }
 
-    //Metodo com parametro
-    public Cliente (String nomeCompleto, String email, String celular, String cpf_passaporte,String rg_cnh,
+    // Metodo construtor com parametro
+    public Cliente (String codCliente, String nomeCompleto, String email, String celular, String cpf_passaporte,String rg_cnh,
         Date dtNascimento, String genero, String senhaLogin, String nomeUsuario, String situacao, Endereco endereco) {
         super(nomeCompleto, email, celular, cpf_passaporte, rg_cnh, dtNascimento, genero, senhaLogin, nomeUsuario, situacao);
         this.codCliente = codCliente;
@@ -27,7 +25,7 @@ class Cliente extends Pessoa {
         this.endereco = endereco;
     }
 
-    //Getters e Setters
+    // Getters e Setters
     public String getCodCliente() {
         return codCliente;
     }
@@ -52,7 +50,7 @@ class Cliente extends Pessoa {
         this.endereco = endereco;
     }
 
-    // Metodos Ações
+    // Ações basicas
     public String exibirDadosCliente() {
         return  "Codigo do Cliente: " + getCodCliente() + 
                 "\nNome completo: " + getNomeCompleto() + 

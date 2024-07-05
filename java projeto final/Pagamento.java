@@ -1,14 +1,13 @@
-
-
 class Pagamento {
+    // Atributos
     private double desconto;
     private double valorTotal;
 
-    //
+    // Relacionamento de dados de outra Class
     private Servico servico;
     private FormaPagamento formaPagamento;
 
-    //Metodo construtor sem parametro
+    // Metodo construtor sem parametro
     public Pagamento() {
         this.formaPagamento = null;
         this.desconto = 0;
@@ -16,7 +15,7 @@ class Pagamento {
         this.servico = null;
     }
 
-    //Metodo construtor com parametro
+    // Metodo construtor com parametro
     public Pagamento (FormaPagamento formaPagamento, double desconto, double valorTotal, Servico servico) {
         this.formaPagamento = formaPagamento;
         this.desconto = desconto;
@@ -24,7 +23,7 @@ class Pagamento {
         this.servico = servico;
     }
 
-    //Getters e Setters
+    // Getters e Setters
     public FormaPagamento getFormaPagamento() {
         return formaPagamento;
     }
@@ -57,7 +56,7 @@ class Pagamento {
         this.servico = servico;
     }
 
-    //Metodos acoes
+    // Acoes basicas
     
     public String pagamentoRealizado() {
         return  "\n Tipo de servico: " + getServico() + 

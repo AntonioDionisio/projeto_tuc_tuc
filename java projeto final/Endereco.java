@@ -1,6 +1,6 @@
 
 class Endereco {
-
+    // Atributos
     private String cep;
     private String endCompleto;
     private String nrCasa;
@@ -9,7 +9,7 @@ class Endereco {
     private String uf;
     private String situacao;
 
-    //Metodo com parametro
+    // Metodo construtor com parametro
     public Endereco(String cep, String endCompleto, String nrCasa, String bairro, String cidade, String uf, String situacao) {
         this.cep = cep;
         this.endCompleto = endCompleto;
@@ -18,10 +18,6 @@ class Endereco {
         this.cidade = cidade;
         this.uf = uf;
         this.situacao = situacao;
-    }
-
-    public String dadosEndereco() {
-        return "endereco completo" + endCompleto + "\ncep" + cep;
     }
 
     public String getCep() {
@@ -79,5 +75,4 @@ class Endereco {
     public void setSituacao(String situacao) {
         this.situacao = situacao;
     }
-
 }

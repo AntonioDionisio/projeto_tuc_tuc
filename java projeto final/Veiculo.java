@@ -1,23 +1,10 @@
 class Veiculo {
+    // Atributos
     private String tipo;
     private String patrimonio;
     private String docVeiculo;
 
-    public String veiculoCadastrado() {
-        // Lógica para cadastrar o veículo
-        return "Veículo cadastrado com sucesso!";
-    }
-
-    public String veiculoDisponivel() {
-        // Lógica para verificar se o veículo está disponível
-        return "Veículo disponível para uso.";
-    }
-
-    public String veiculoManutencao() {
-        // Lógica para agendar manutenção do veículo
-        return "Veículo agendado para manutenção.";
-    }
-
+    // Getters e Setters
     public String getTipo() {
         return tipo;
     }

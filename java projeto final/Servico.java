@@ -2,6 +2,7 @@
 import java.util.Date;
 
 class Servico {
+    // Atributos 
     private String osServicos;
     private String tipo;
     private String fidelidade;
@@ -9,13 +10,13 @@ class Servico {
     private String horarioFinal;
     private Date dataSv;
 
-    //
+    // Relacionamento de dados de outra Class
     private Cliente cliente;
     private Colaborador colaborador;
     private Veiculo veiculo;
     private Pagamento pagamento;
 
-    //Metodo construtor sem parametro
+    // Metodo construtor sem parametro
     public Servico () {
         this.osServicos = "";
         this.tipo = "";
@@ -23,14 +24,14 @@ class Servico {
         this.horarioInicial = "";
         this.horarioFinal = "";
         this.dataSv = null;
-        //informacao recolhidas de outras class
+        // Informacao recolhidas de outras class
         this.cliente = null;
         this.colaborador = null;
         this.veiculo = null;
         this.pagamento = null;
 
     }
-    //Metodo construtor com parametro
+    // Metodo construtor com parametro
     public Servico (String osServicos, String tipo, String fidelidade, String horarioInicial, String horarioFinal, Date dataSv, Cliente cliente, Colaborador colaborador, Veiculo veiculo, Pagamento pagamento) {
         this.osServicos = osServicos;
         this.tipo = tipo;
@@ -38,15 +39,14 @@ class Servico {
         this.horarioInicial = horarioInicial;
         this.horarioFinal = horarioFinal;
         this.dataSv = dataSv;
-        //informacao recolhidas de outras class
+        // informacao recolhidas de outras class
         this.cliente = cliente;
         this.colaborador = colaborador;
         this.veiculo = veiculo;
         this.pagamento = pagamento;
 }
 
-    //Getters e Setters
-
+    // Getters e Setters
     public String getOsServicos() {
         return osServicos;
     }
@@ -95,7 +95,7 @@ class Servico {
         this.dataSv = dataSv;
     }
     
-    //Associando classes para servicos
+    // Associando classes para servicos
     public Cliente getCliente() {
         return cliente;
     }
@@ -128,7 +128,7 @@ class Servico {
         this.pagamento = pagamento;
     }
 
-    //Ações
+    // Acoes
 
     public String svEscolhidoCColaborador () {
         return  "Nome Cliente: " + getCliente().getNomeCompleto() +
